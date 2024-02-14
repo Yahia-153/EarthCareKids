@@ -1,4 +1,4 @@
-const audio = new Audio('../hi kids i am Zain i .mp3');
+const audio = new Audio('hi kids i am Zain i .mp3');
     function hiSound() {
         if (audio.paused) {
             audio.play();
