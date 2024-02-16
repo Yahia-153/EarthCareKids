@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32*32" href="ecology_10104684.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="main.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=VT323&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Recycling Sorting Game</title>
+
+</head>
+<body class="game-body">
+  <div class="contents" id="items-container">
+    <div class="item"  draggable="true"><img src="game_img/pl_b3.png"id="plastic-item" ></div>
+    <div class="item"  draggable="true"><img src="game_img/pl_b.png" id="plastic-item"></div>
+    <div class="item"  draggable="true"><img src="game_img/pl_b2.png"id="plastic-item" ></div>
+    <div class="item"  draggable="true"><img src="game_img/book.png" id="paper-item"></div>
+    <div class="item"  draggable="true"><img src="game_img/box.png" id="paper-item"></div>
+    <div class="item"  draggable="true"><img src="game_img/pa_np.png" id="paper-item"></div>
+    <div class="item"  draggable="true"><img src="game_img/glass-b.png" id="glass-item"></div>
+    <div class="item"  draggable="true"><img src="game_img/glass-b2.png" id="glass-item"></div>
+    <div class="item"  draggable="true"><img src="game_img/glass-g.png" id="glass-item"></div>
+  </div>
+  <div class="container">
+    <div class="bin" id="paper-bin"><img src="game_img/pa_bin.png" alt="Paper Bin" id="bin"></div>
+    <div class="bin" id="glass-bin"><img src="game_img/gl_bin.png" alt="Glass Bin"id="bin"></div>
+    <div class="bin" id="plastic-bin"><img src="game_img/pl_bin.png" alt="Plastic Bin" id="bin"></div>
+  </div>
+  <script>
+    // JavaScript code for the game
+    const items = document.querySelectorAll('.item');
+    const bins = document.querySelectorAll('.bin');
+    let correctItems = 0;
+    
+    items.forEach(item => {
+      item.addEventListener('dragstart', dragStart);
+    });
+    
+    bins.forEach(bin => {
+      bin.addEventListener('dragover', dragOver);
+      bin.addEventListener('drop', drop);
+    });
+    
+    function dragStart(e) {
+      e.dataTransfer.setData('text', e.target.id);
+    }
+    
+    function dragOver(e) {
+      e.preventDefault();
+    }
+    
+    function drop(e) {
+      e.preventDefault();
+      const itemId = e.dataTransfer.getData('text');
+      const item = document.getElementById(itemId);
+      const binId = this.id;
+      if (canDropInBin(itemId, binId)) {
+        this.appendChild(item);
+        correctItems++;
+        if (correctItems === items.length) {
+          alert('Congratulations! You placed all items in the correct bins.');
+        }
+      } else {
+        alert('Wrong bin! Please drop the item into the correct bin.');
+      }
+    }
+    
+    function canDropInBin(itemId, binId) {
+      switch (itemId) {
+        case 'plastic-item':
+          return binId === 'plastic-bin';
+        case 'paper-item':
+          return binId === 'paper-bin';
+        case 'glass-item':
+          return binId === 'glass-bin';
+        default:
+          return false;
+      }
+    }
+  </script>
+</body>
+</html>
