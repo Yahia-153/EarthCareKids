@@ -1204,9 +1204,105 @@ footer{
   }
   
   
-/*---------------------------------------------------------------------------------------*/
-/*------------------------------------responsive-css-------------------------------------*/
-/*---------------------------------------------------------------------------------------*/
+  /*---------------------------------------------------------------------------------------*/
+  /*---------------------------------------game-css----------------------------------------*/
+  /*---------------------------------------------------------------------------------------*/
+/*.gameBody{
+    font-family: var(--kanit-font);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    #board{
+        width: 30%;
+        aspect-ratio: 1/1;
+        border: var(--main-color) 3px solid;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        img{
+            width: calc(100%/3);
+            outline: var(--main-color)  solid 1px;
+            aspect-ratio:  1 / 1;
+            margin: 0;
+        }
+    }
+    .turns{
+        width: 100%;
+        text-align:center;
+        margin: 20px 0;
+    }
+    #pieces{
+        width: 30%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        border: var(--main-color) 3px solid;
+        img{
+            width:calc(100%/3);
+            aspect-ratio: 1/1; 
+            min-width: 100px;
+        }
+    }
+}*/
+.game-body{
+    font-family: var(--kanit-font);
+    .contents{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        outline: var(--main-color) 3px solid;
+        padding: 25px 0 ;
+        .item {
+            display: flex;
+            cursor: pointer;
+            width: calc(100%/13.5);
+            min-width: 100px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        flex-wrap: wrap;
+        gap: 50px;
+        padding: 100px 0 0 0;
+    
+        .bin {
+          width:calc(100%/4);
+          min-width: 250px;
+          height: fit-content;
+          display: flex;
+          justify-content: center;
+          align-items: top;
+          flex-wrap: wrap;
+          img{
+              width: 30%;
+              object-fit: contain;
+              object-position: center;
+          }
+          #bin{
+            width: 100%;
+          }
+        }
+      }
+      }
+      
+      
+
+
+
+
+  /*---------------------------------------------------------------------------------------*/
+  /*------------------------------------responsive-css-------------------------------------*/
+  /*---------------------------------------------------------------------------------------*/
 @media screen and (max-width: 1105px){
     nav{
         .space{
