@@ -21,7 +21,7 @@
             <ul>
                 <li><button onclick="window.location='index.html'"><ion-icon name="home"></ion-icon> HOME</button></li>
                 <li><button onclick="window.location='about.html'"><ion-icon name="person"></ion-icon> ABOUT US</button></li>
-                <li><button onclick="window.location='videos.html'"><ion-icon name="pencil"></ion-icon> RECYCLE IT</button></li>
+                <li><button onclick="window.location='videos.html'"><ion-icon name="play-circle"></ion-icon> VIDEOS</button></li>
                 <li><button onclick="window.location='sort game.html'"><ion-icon name="game-controller"></ion-icon> PLAY WITH ME</button>
                 <li><button onclick="window.location='blogs.html'"><ion-icon name="newspaper"></ion-icon> BLOGS</button>
                 <li><button onclick="window.location='contact.html'"><ion-icon name="call"></ion-icon> CONTACT US</button></li>
@@ -41,7 +41,7 @@
         <nav id="nav">
             <div class="space">
                 <div class="logo">
-                    <a href=""><img src="logo.png" alt="logo"  ></a>
+                    <a href="index.html"><img src="logo.png" alt="logo"  ></a>
                 </div>
                 <div class="links">
                     <ul>
@@ -50,7 +50,7 @@
                         <li><button><ion-icon name="leaf"></ion-icon> RECYCLE <span><ion-icon name="chevron-forward-outline" class="arrow"></ion-icon></span></button>
                             <div class="recycle">
                                 <ul>
-                                    <li><button onclick="window.location='videos.html'"><ion-icon name="pencil"></ion-icon> RECYCLE IT</button>
+                                    <li><button onclick="window.location='videos.html'"><ion-icon name="play-circle"></ion-icon> VIDEOS</button>
                                     <hr>
                                     <li><button onclick="window.location='sort game.html'"><ion-icon name="game-controller"></ion-icon> PLAY WITH ME</button>
                                         <hr>
@@ -71,8 +71,8 @@
                 <img src="Robots design/robot/1x/hi.png" alt="" data-aos="fade-left" data-aos-duration="1000">
             </div>
             <div class="hi">
-                <h3 class="head">Hi kids.</h3>
-    <p>you've got into the right place for more healthy life! Right here,togther, we will learn how to make our enviroment best ever. by learning how to recycle,conserve more energy and avoid the usage of fuel as possiblewhich emits harmful gases later </p>
+                <h3 class="head">Hi kids!</h3>
+                <p>you've got into the right place for more healthy life! Right here,togther, we will learn how to make our environment best ever. by learning how to recycle,conserve more energy and avoid the usage of fuel as possible which emits harmful gases later. </p>
             </div>
             
         </section>
@@ -145,16 +145,29 @@
             </div>
         </section>
     </section>
-    <div class="join-div">
+    <div class="join-div" id="join">
         <div class="join" data-aos="slide-left" aos-duration="1000">
             <div class="bg"></div>
             <div class="center">
                 <h3>Join our family</h3>
                 <p>Be a member in our family</p>
-                <button>join us</button>
+                <button onclick="window.location='signup.html'">join us</button>
             </div>
         </div>
     </div>
+
+
+<script src="https://translate.google.com/translate_a/element.js? cb=googleTranslateElementInit"></script>
+
+<script>
+
+function googleTranslateElementInit(){
+
+new google.translate.TranslateElement(
+{pageLanguage: 'en'},'google_translate_element');
+}
+
+ </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js" ></script>
     <script>
         AOS.init();
@@ -195,7 +208,6 @@
           );
         }
       </script>
-      
 </body>
 <footer data-aos="slide-right" data-aos-duration="1000">
     <div class="logo">
@@ -205,7 +217,7 @@
         <ul>
             <li><button onclick="window.location='index.html'"><ion-icon name="home"></ion-icon> HOME</button></li>
             <li><button onclick="window.location='about.html'"><ion-icon name="person"></ion-icon> ABOUT US</button></li>
-            <li><button onclick="window.location='videos.html'"><ion-icon name="pencil"></ion-icon> RECYCLE IT</button></li>
+            <li><button onclick="window.location='videos.html'"><ion-icon name="play-circle"></ion-icon> VIDEOS</button></li>
             <li><button ><ion-icon name="game-controller"></ion-icon> PLAY WITH ME</button>
             <li><button onclick="window.location='blogs.html'"><ion-icon name="newspaper"></ion-icon> BLOGS</button>
             <li><button onclick="window.location='contact.html'"><ion-icon name="call"></ion-icon> CONTACT US</button></li>
@@ -217,7 +229,7 @@
         
         <a href="https://www.instagram.com/earthcarekids1?igsh=MXd2NWJ6cmUxdzlkeg==" target="_blank" rel="noopener noreferrer"><button class="i"><ion-icon name="logo-instagram"></ion-icon></button></a>
         <a href="https://www.youtube.com/@EARTHCAREKIDS" target="_blank" rel="noopener noreferrer"><button class="y"><ion-icon name="logo-youtube"></ion-icon></button></a>
-        <a href="https://x.com/earthcarekids?t=_S2AhQttjDiYgeA4pJMSBw&s=09" target="_blank" rel="noopener noreferrer"><button class="t"><ion-icon name="logo-twitter"></ion-icon></button></a>
+        <a href="https://twitter.com/earth_care_kids" target="_blank" rel="noopener noreferrer"><button class="t"><ion-icon name="logo-twitter"></ion-icon></button></a>
     </div>
 </footer>
 

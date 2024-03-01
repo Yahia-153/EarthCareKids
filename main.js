@@ -24,6 +24,8 @@ function hiSound() {
         document.getElementById("burgerDiv").style.right="-100%";
     }
     }
+
+   
   /* //game code//
 
     let rows=3;

@@ -23,7 +23,7 @@
             <ul>
                 <li><button onclick="window.location='index.html'"><ion-icon name="home"></ion-icon> HOME</button></li>
                 <li><button onclick="window.location='about.html'"><ion-icon name="person"></ion-icon> ABOUT US</button></li>
-                <li><button onclick="window.location='videos.html'"><ion-icon name="pencil"></ion-icon> RECYCLE IT</button></li>
+                <li><button onclick="window.location='videos.html'"><ion-icon name="play-circle"></ion-icon> VIDEOS</button></li>
                 <li><button onclick="window.location='sort game.html'"><ion-icon name="game-controller"></ion-icon> PLAY WITH ME</button>
                 <li><button onclick="window.location='blogs.html'"><ion-icon name="newspaper"></ion-icon> BLOGS</button>
                 <li><button onclick="window.location='contact.html'"><ion-icon name="call"></ion-icon> CONTACT US</button></li>
@@ -41,7 +41,7 @@
     <nav id="nav">
         <div class="space">
             <div class="logo">
-                <a href=""><img src="logo.png" alt="logo"  ></a>
+                <a href="index.html"><img src="logo.png" alt="logo"  ></a>
             </div>
             <div class="links">
                 <ul>
@@ -50,7 +50,7 @@
                     <li><button><ion-icon name="leaf"></ion-icon> RECYCLE <span><ion-icon name="chevron-forward-outline" class="arrow"></ion-icon></span></button>
                         <div class="recycle">
                             <ul>
-                                <li><button onclick="window.location='videos.html'"><ion-icon name="pencil"></ion-icon> RECYCLE IT</button>
+                                <li><button onclick="window.location='videos.html'"><ion-icon name="play-circle"></ion-icon> VIDEOS</button>
                                 <hr>
                                 <li><button onclick="window.location='sort game.html'"><ion-icon name="game-controller"></ion-icon> PLAY WITH ME</button>
                                     <hr>
@@ -64,9 +64,19 @@
             </div>
         </div>
     </nav> 
-    
+    <div class="lor">
+        <div>
+            <h3>select catigory of videos :</h3>
+            <button onclick="document.getElementById('recycle').style.display='none'; document.getElementById('learn').style.display='block';">
+                learning videos
+            </button>
+            <button onclick="document.getElementById('recycle').style.display='block'; document.getElementById('learn').style.display='none';">
+                recycleing videos
+            </button>
+        </div>
+    </div>
     <!-- Video Section -->
-    <section class="videos">
+    <section class="videos" id="recycle">
         <header>
             <h4>let's learn how to recycle !<br/>watch the video below:</h4>
         </header>
@@ -76,71 +86,154 @@
         </div>
         <div class="catigories">
             <div class="catigory">
-                <input type="checkbox" name="all" id="all" onclick="select()">
-                <label>all</label>
+                <select name="catigories" id="filter" onchange="select()">
+                    <option value="all">All</option>
+                    <option value="plastic">plastic</option>
+                    <option value="paper">paper</option>
+                    <option value="carton">Carton</option>
+                </select>
             </div>
-            <div class="catigory">
-                <input type="checkbox" name="paper" id="paper" onclick="select()">
-                <label>paper</label>
-            </div>
-            <div class="catigory">
-                <input type="checkbox" name="carton" id="carton" onclick="select()">
-                <label>carton</label>
-            </div>
-            <div class="catigory">
-                <input type="checkbox" name="plastic" id="plastic" onclick="select()">
-                <label>plastic</label>
-            </div>
+            
             
         </div>
     </div>
-        <div class="body">
-            <div class="video " data-aos="fade-right" aos-duration="1000">
-                <iframe  src="https://www.youtube.com/embed/rqJDO3TWnac?si=cqxt5bHZxxlD74a1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media;  picture-in-picture; web-share" allowfullscreen></iframe>
-                <div class="content">
-                    <p>how to make a city model from paper</p>
+        <div class="body" id="vids">
+            <div class="video carton" name="video">
+                <iframe  src="https://www.youtube.com/embed/oRg7eeivC4k?si=OUmeDOF_Z0JDu-Qn"  title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media;  picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="content carton">
+                    <p>how to make a coin bank from old cardboard</p>
                     <ul>
                         <h4>tools and materials</h4>
-                        <li>scissors</li>
-                        <li>Colored Papers</li>
-                        <li>glue</li>
-                        <li>plastic eyes</li>
-                        <li>small pieces of cardboard for body and head.</li>
+                        <li>Cardboard</li>
+                        <li>Hot Glue Gun</li>
+                        <li>Cutter Knife</li>
+                        <li>Glue Sticks</li>
 
                     </ul>
                 </div>
             </div>
-            <div class="video "  data-aos="slide-left" aos-duration="1000">
-                <iframe  src="https://www.youtube.com/embed/rqJDO3TWnac?si=cqxt5bHZxxlD74a1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media;  picture-in-picture; web-share" allowfullscreen></iframe>
-                <div class="content">
-                    <p>how to make a city model from paper</p>
+            
+            <div class="video carton" name="video">
+                <iframe  src="https://www.youtube.com/embed/M3TOKTHYc3g?si=Nqy68oF4QDNO7CdW"  title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media;  picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="content carton">
+                    <p>Best Mini Dustin made from paper cup</p>
+                    <ul>
+                        <h4>tools and materials</h4>
+                        <li>paper cups</li>
+                        <li>wooden stick</li>
+                        <li>Scissors</li>
+                        <li>Glue</li>
+
+                    </ul>
                 </div>
             </div>
-            <div class="video " data-aos="slide-right" aos-duration="1000">
-                <iframe  src="https://www.youtube.com/embed/rqJDO3TWnac?si=cqxt5bHZxxlD74a1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media;  picture-in-picture; web-share" allowfullscreen></iframe>
-                <div class="content">
-                    <p>how to make a city model from paper</p>
+            <div class="video plastic" name="video">
+                <iframe  src="https://www.youtube.com/embed/B98DjzRKRo8?si=tfzdbLTNN7w3vwoT"  title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media;  picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="content plastic">
+                    <p>How to Make Trash Bin From Plastic Bottle</p>
+                    <ul>
+                        <h4>tools and materials</h4>
+                        <li>plastic bottle</li>
+                        <li>colored paper</li>
+                        <li>cardboard</li>
+                        <li>wooden stick</li>
+                        <li>Scissors</li>
+                        <li>Hot Glue Gun</li>
+                    </ul>
                 </div>
             </div>
-            <div class="video " data-aos="slide-left" aos-duration="1000">
-                <iframe  src="https://www.youtube.com/embed/rqJDO3TWnac?si=cqxt5bHZxxlD74a1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen ></iframe>
-                <div class="content">
-                    <p>how to make a city model from paper</p>
-                    
+            <div class="video plastic" name="video">
+                <iframe  src="https://www.youtube.com/embed/7Bh55iHNYEI?si=rX8h8OVRkGAy5OAu"  title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media;  picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="content plastic">
+                    <p>how to make pen pencil holder</p>
+                    <ul>
+                        <h4>tools and materials</h4>
+                        <li>plastic bottle</li>
+                        <li>colored paper</li>
+                        <li>Scissors</li>
+                        <li>Glue</li>
+                    </ul>
                 </div>
             </div>
-            <div class="video " data-aos="slide-right" aos-duration="1000">
-                <iframe  src="https://www.youtube.com/embed/rqJDO3TWnac?si=cqxt5bHZxxlD74a1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; ; picture-in-picture; web-share" allowfullscreen></iframe>
-                <div class="content">
-                    <p>how to make a city model from paper</p>
+            
+            <div class="video plastic" name="video">
+                <iframe  src="https://www.youtube.com/embed/MMxn5Vh1hHo?si=XhWcH9GMJ2rzDcdd"  title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media;  picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="content plastic">
+                    <p>How to make cute pencil box from water bottle</p>
+                    <ul>
+                        <h4>tools and materials</h4>
+                        <li>plastic bottle</li>
+                        <li>colored paper</li>
+                        <li>Scissors</li>
+                        <li>Glue</li>
+                    </ul>
                 </div>
             </div>
-            <div class="video" data-aos="slide-left" aos-duration="1000">
-                <iframe  src="https://www.youtube.com/embed/rqJDO3TWnac?si=cqxt5bHZxxlD74a1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; ; picture-in-picture; web-share" allowfullscreen></iframe>
-                <div class="content">
-                    <p>how to make a city model from paper</p>
+            <div class="video paper" name="video">
+                <iframe  src="https://www.youtube.com/embed/GC7xMulhq7c?si=JJj91nThW2KploAM"  title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media;  picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="content paper">
+                    <p>How to make decktop orgnizer using paper</p>
+                    <ul>
+                        <h4>tools and materials</h4>
+                        <li>papers</li>
+                        <li>paintes</li>
+                        <li>Scissors</li>
+                        <li>Glue</li>
+                        <li>Glue stick</li>
+                        <li>cardboard</li>
+                    </ul>
                 </div>
             </div>
+            <div class="video paper" name="video">
+                <iframe  src="https://www.youtube.com/embed/x76VGDzbCmM?si=oHztUJS1j__I8d0L"  title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media;  picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="content paper">
+                    <p>How to make keyes holder using paper</p>
+                    <ul>
+                        <h4>tools and materials</h4>
+                        <li>papers</li>
+                        <li>paintes</li>
+                        <li>Scissors</li>
+                        <li>Glue</li>
+                        <li>Glue stick</li>
+                        <li>rope</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </section>
+    <section class="videos" id="learn">
+        <div class="body" id="vids">
+            <div class="video">
+                <iframe  src="https://www.youtube.com/embed/OasbYWF4_S8?si=evWmsRLRGvGJrqPv&amp;start=6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="content">
+                    <p>Reduce, Reuse and Recycle, to enjoy a better life</p>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/t7Q7y_xjR5E?si=7bJKTNZ1i5mPruB6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                 
+                <div class="content">
+                     <p>air pollution</p>
+                     <h6><a href="Factory Waste and Air Pollution.html">artical about this topic</a></h6>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/Om42Lppkd9w?si=BX03UIwBNhsmtZ48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                 
+                <div class="content">
+                     <p>water pollution</p>
+                     <h6><a href="Water Pollution.html">artical about this topic</a></h6>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/tykLKCT7DyY?si=losgt0tO6De--cFt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                 
+                <div class="content">
+                     <p>climate change</p>
+                     <h6><a href="climate change.html">artical about this topic</a></h6>
+                </div>
+            </div>
+            
             
             
         </div>
@@ -149,8 +242,26 @@
     <script>
         AOS.init();
       </script>
+      
+<script>
+    // JavaScript code
+    document.getElementById('filter').addEventListener('change', function() {
+      const filterValue = this.value;
+      const items = document.querySelectorAll('#vids div');
+  
+      items.forEach(item => {
+        if (filterValue === 'all' || item.classList.contains(filterValue)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+    
+  </script>
+  
 </body>
-<footer data-aos="slide-up" aos-duration="1000">
+<footer >
     <div class="logo">
         <img src="logo w.png" alt="">
     </div>
@@ -158,7 +269,7 @@
         <ul>
             <li><button onclick="window.location='index.html'"><ion-icon name="home"></ion-icon> HOME</button></li>
             <li><button onclick="window.location='about.html'"><ion-icon name="person"></ion-icon> ABOUT US</button></li>
-            <li><button onclick="window.location='videos.html'"><ion-icon name="pencil"></ion-icon> RECYCLE IT</button></li>
+            <li><button onclick="window.location='videos.html'"><ion-icon name="play-circle"></ion-icon> VIDEOS</button></li>
             <li><button onclick="window.location='sort game.html'"><ion-icon name="game-controller"></ion-icon> PLAY WITH ME</button>
             <li><button onclick="window.location='blogs.html'"><ion-icon name="newspaper"></ion-icon> BLOGS</button>
             <li><button onclick="window.location='contact.html'"><ion-icon name="call"></ion-icon> CONTACT US</button></li>
@@ -170,7 +281,7 @@
         
         <a href="https://www.instagram.com/earthcarekids1?igsh=MXd2NWJ6cmUxdzlkeg==" target="_blank" rel="noopener noreferrer"><button class="i"><ion-icon name="logo-instagram"></ion-icon></button></a>
         <a href="https://www.youtube.com/@EARTHCAREKIDS" target="_blank" rel="noopener noreferrer"><button class="y"><ion-icon name="logo-youtube"></ion-icon></button></a>
-        <a href="https://x.com/earthcarekids?t=_S2AhQttjDiYgeA4pJMSBw&s=09" target="_blank" rel="noopener noreferrer"><button class="t"><ion-icon name="logo-twitter"></ion-icon></button></a>
+        <a href="https://twitter.com/earth_care_kids" target="_blank" rel="noopener noreferrer"><button class="t"><ion-icon name="logo-twitter"></ion-icon></button></a>
     </div>
 </footer>
 </html>
