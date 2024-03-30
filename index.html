@@ -77,15 +77,7 @@
             
         </section>
         <section class="services" id="service">
-            <div class="custom-video" data-aos="zoom-out-right" data-aos-duration="1000">
-                <div class="custom-video__container">
-                  <video class="custom-video__video" >
-                    <source src="hi.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  <div class="custom-video__control"><ion-icon name="play"></ion-icon></div>
-                </div>
-            </div>
+            
             <div class="container">
                 <div class="r-img">
                     <img src="Robots design/robot/1x/Asset 5.png" alt=""  data-aos="slide-right" data-aos-duration="1000">
@@ -107,15 +99,7 @@
             </div>
         </section>
         <section class="services" id="service">
-            <div class="custom-video" data-aos="zoom-out-left" data-aos-duration="1000">
-                <div class="custom-video__container">
-                  <video class="custom-video__video" >
-                    <source src="hi.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  <div class="custom-video__control"><ion-icon name="play"></ion-icon></div>
-                </div>
-            </div>
+           
             <div class="container">
                 <div class="div">
                     <div class=" massage"  
@@ -129,7 +113,7 @@
                         <button class="btn-class-name" onclick="window.location='sort game.html'">
                             <span class="back"></span>
                             <span class="front"></span>
-                          </button>
+                        </button>
                     </div>
                     <div class="p-btn" >
                         <button onclick="gameSound()"><ion-icon name="play"></ion-icon></button>
@@ -171,43 +155,8 @@ new google.translate.TranslateElement(
     <script src="https://unpkg.com/aos@next/dist/aos.js" ></script>
     <script>
         AOS.init();
-      </script>
-      <script>
-        // Adding functinality to video play and pause button
-        const video = document.getElementsByClassName("custom-video__video");
-        let i;
-        for (i = 0; i < video.length; i++) {
-          video[i].addEventListener("click", function () {
-            const controls = this.nextElementSibling;
-            if (controls.innerHTML === "▶") {
-              controls.innerHTML = "| |";
-              this.play();
-            } else {
-              controls.innerHTML = "▶";
-              this.pause();
-            }
-          });
-          video[i].addEventListener("mouseout", function () {
-            const controls = this.nextElementSibling;
-            if (!this.paused) {
-              controls.style.display = "none";
-            }
-          });
-          video[i].addEventListener("mouseover", function () {
-            const controls = this.nextElementSibling;
-            controls.style.display = "flex";
-          });
-          video[i].addEventListener(
-            "ended",
-            function () {
-              const controls = this.nextElementSibling;
-              controls.style.display = "flex";
-              controls.innerHTML = "▶";
-            },
-            false
-          );
-        }
-      </script>
+    </script>
+
 </body>
 <footer data-aos="slide-right" data-aos-duration="1000">
     <div class="logo">
@@ -226,7 +175,6 @@ new google.translate.TranslateElement(
     </div>
     <div class="social">
         <a href="https://www.facebook.com/profile.php?id=61556130872330" target="_blank" rel="noopener noreferrer"><button class="f" ><ion-icon name="logo-facebook"></ion-icon></button></a>
-        
         <a href="https://www.instagram.com/earthcarekids1?igsh=MXd2NWJ6cmUxdzlkeg==" target="_blank" rel="noopener noreferrer"><button class="i"><ion-icon name="logo-instagram"></ion-icon></button></a>
         <a href="https://www.youtube.com/@EARTHCAREKIDS" target="_blank" rel="noopener noreferrer"><button class="y"><ion-icon name="logo-youtube"></ion-icon></button></a>
         <a href="https://twitter.com/earth_care_kids" target="_blank" rel="noopener noreferrer"><button class="t"><ion-icon name="logo-twitter"></ion-icon></button></a>

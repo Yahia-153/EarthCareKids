@@ -290,7 +290,7 @@ nav{
     width: 100%;
     padding-top: 100px;
     padding-bottom: 50px;
-    min-height: 110vh;
+    min-height: 85vh;
     background: url(fbg.jpg);
     background-size: cover;
     background-position: center;
@@ -357,54 +357,7 @@ nav{
     margin-top: 150px;
     width: 100%;
     
-    .custom-video {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        flex-wrap: wrap;
-        display: none;
-    }
     
-    .custom-video__container {
-        position: relative;
-        top: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .custom-video__video {
-        width: 100%;
-        border-radius: 2em;
-        cursor: pointer;
-    }
-    
-    .custom-video__control {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 50%;
-        padding: 0em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #ffffff;
-        font-size: 1em;
-        font-family: var(--kanit-font);
-        font-weight: 400;
-        width: 3em;
-        height: 3em;
-        white-space: nowrap;
-        line-height: 0;
-    }
-    
-    video::-webkit-media-controls {
-        position: relative;
-        z-index: 1;
-    }
     .container{
         width: 100%;
         height: fit-content;
@@ -1511,7 +1464,7 @@ footer{
         margin: a;
         h4{
             background: #ffffff54;
-/            width: fit-content;
+            width: fit-content;
             margin: 40px auto ;
             padding: 20px 40px;
             border: var(--main-color) 4px solid;
@@ -1767,21 +1720,63 @@ footer{
     }
     .m-page{
         .hi{
-            margin: 0;
+            margin: 0px;
         }
     }
 }
 @media screen and (max-width: 750px){
+    .m-page{
+
+        .hi{
+            .head{
+                font-size: 2rem;
+            }
+            p{
+            font-size: 17px;
+            }
+        }
+        .img {
+            position: relative;
+            width:  50%;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            img{
+                width: 50%;
+            }
+        }
+    }
     .m-page .img {
         width: 100%;
     }
-    .services {
+    .services{
+        
+        margin-top: 75px ;
         .container{
-        display: none;
-        }
-        .custom-video{
-            display: flex;
+            .div{
+                
+                .massage{
+                    border-radius: 2rem;
+                    .text{
+                        p{
+                            font-size: 13px;
+                        }
+                    }
+                    .p-btn{
+                        button{
+                            margin: 2.5px 10px;
+                                ion-icon{
+                                font-size: 9px;
+                                margin: 5px;
+                                }
+                        }
+                    }
+                    .btn-class-name{
+                        width: 30px;
+                        height:  30px;
+                    }
+                }
+            }
         }
     }
 }
-  
