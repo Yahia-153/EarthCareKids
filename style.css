@@ -10,8 +10,8 @@ html{
 }
 body{
     width: 100%;
-    font-family: var(--rubik-font);  
-    font-weight: 400;
+    font-family: var(--main-font);  
+    font-weight: bold;
     background: var(--bg-color);
     ::selection { background: var(--main-color); color: var(--bg-color);}
 }
@@ -21,18 +21,28 @@ body{
     }
 }
 
-:root {
+body {
     --main-color:#579212;
     --nav-font:1rem;
     --nav-color:var(--bg-color);
     --nav-blur:5px;
     --h1-color:#467314;
     --h1-font:2.5rem;
-    --rubik-font:"Rubik Mono One", monospace ;
-    --vt323-font:"VT323", monospace ;
+    --main-font:"Rubik Mono One", monospace ;
+    --game-font:"VT323", monospace ;
     --bg-color:#f2e9e2;
     --alert-color:#810a1d ;
-    --kanit-font: "Kanit", sans-serif;
+    --secondary-font: "Kanit", sans-serif;
+}
+.ar{
+        --main-font:"Cairo", sans-serif;
+        --game-font:"Mada", sans-serif;
+        --bg-color:#f2e9e2;
+        --alert-color:#810a1d ;
+        --secondary-font: "Marhey", sans-serif;
+    #head-ms{
+        -webkit-text-stroke-width:0px;
+    }
 }
 .burger-div{
     width:100%;
@@ -73,7 +83,7 @@ body{
                     background: transparent;
                     border:none;
                     cursor: pointer;
-                    font-family: var(--rubik-font);
+                    font-family: var(--main-font);
                     font-size: var(--nav-font);
                     color: var(--bg-color);
                     
@@ -254,7 +264,7 @@ nav{
                         cursor: pointer;
                         font-size: var(--nav-font);
                         color: var(--main-color);
-                        font-family: var(--rubik-font);
+                        font-family: var(--main-font);
                         transition: all .25s ease-in-out;
                         margin:  10px;
                         &:hover{
@@ -303,7 +313,7 @@ nav{
     overflow-x: hidden;
     
     .hi{
-        margin:0 0 0 60px ;
+        margin:auto ;
         height: auto;
         min-width: 300px;
         width: 30%;
@@ -330,7 +340,7 @@ nav{
         p{
             margin: 40px 5px;
             text-align: start;
-            font-family: var(--vt323-font);
+            font-family: var(--game-font);
             width:  auto;
             font-size: 22.5px;
             color: var(--bg-color);
@@ -394,7 +404,7 @@ nav{
                  p{
                      font-size: 23px;
                      text-transform: uppercase;
-                     font-family: var(--vt323-font);
+                     font-family: var(--game-font);
                     color: #767676;
                     text-indent: 10px;
                     margin: 10px;
@@ -521,7 +531,7 @@ nav{
             gap: 15px;
             color: #ffff;
             text-transform: capitalize;
-            font-family: var(--kanit-font);
+            font-family: var(--secondary-font);
             h3{
                 font-size: 25px;
                 text-transform: uppercase;
@@ -554,6 +564,7 @@ nav{
 }
 
 footer{
+    position: relative;
     background: var(--main-color);
     display: flex;
     align-items: center;
@@ -585,7 +596,7 @@ footer{
                     background: transparent;
                     border: 0;
                     font-size: 16px;
-                    font-family: var(--rubik-font);
+                    font-family: var(--main-font);
                     transition: all .3s ease-in-out;
                     cursor: pointer;
                     &:hover{
@@ -652,6 +663,16 @@ footer{
         }
     }
     }
+    .lan{
+        a{
+            color: var(--bg-color);
+            text-decoration: none;
+        }
+        ion-icon{
+            font-size: 25px;
+            font-weight: bold;
+        }
+    }
 }
                 
     
@@ -666,7 +687,7 @@ footer{
     width: 100% ;
     min-height: 75vh;
     padding: 100px 0 0 0 ;
-    font-family: var(--kanit-font);
+    font-family: var(--secondary-font);
     text-transform: uppercase;
     overflow-x: hidden;
     .lor{
@@ -745,7 +766,7 @@ footer{
                 select{
                     background: var(--bg-color);
                     font-size: 15px;
-                    font-family: var(--kanit-font);
+                    font-family: var(--secondary-font);
                     font-weight: bold;
                     color: var(--main-color);
                     padding: 5px 10px;
@@ -855,7 +876,7 @@ footer{
         min-height: 100vh;
         display: grid;
         place-items: center;
-        font-family: var(--kanit-font);
+        font-family: var(--secondary-font);
         .main{
             display: flex;
             flex-direction: column;
@@ -891,7 +912,7 @@ footer{
 /*---------------------------------------------------------------------------------------*/
  .blogs-body{
     width: 100%;
-    font-family: var(--kanit-font);
+    font-family: var(--secondary-font);
     padding: 150px 0 0 0 ;
 
     .contain{
@@ -970,7 +991,7 @@ footer{
 /*------------------------------------blog-css-----------------------------------------*/
 /*---------------------------------------------------------------------------------------*/
 .blog-body{
-    font-family: var(--kanit-font);
+    font-family: var(--secondary-font);
     padding-top: 70px;
     .blog{
         width: 100%;
@@ -1029,7 +1050,7 @@ footer{
 
                         
                         &::before{
-                            content: "➡ ";
+                            content: " = ";
                         }
                         &::after{
                             content: " :";
@@ -1063,6 +1084,7 @@ footer{
                             p,ul li{
                                 color: #000;
                                 text-decoration: none;
+                                list-style-position: inside;
                                 font-size: 20px;
                                 font-weight: 600;
                                 margin-left: 10px;
@@ -1071,6 +1093,7 @@ footer{
                             }
                             ul{
                                 list-style: circle ;
+                                list-style-position: inside;
                                 margin-left: 25px;
                                 li{
                                     font-size: 16px;
@@ -1099,7 +1122,7 @@ footer{
     background: var(--bg-color) ;
     background-size: contain;
     backdrop-filter: blur(1px);
-    font-family: var(--kanit-font);
+    font-family: var(--secondary-font);
 
     .container{
         width: 100%;
@@ -1238,7 +1261,7 @@ footer{
   /*---------------------------------------game-css----------------------------------------*/
   /*---------------------------------------------------------------------------------------*/
 .game-body{
-    font-family: var(--kanit-font);
+    font-family: var(--secondary-font);
     #alert{
         width: 100%;
         min-height: 100%;
@@ -1285,14 +1308,14 @@ footer{
                     font-size: 20px;
                     border: 0;
                     cursor: pointer;
-                    font-family: var(--rubik-font);
+                    font-family: var(--main-font);
                     font-weight: bold;
                 }
                 #next{
                     width: 100%;
                     display: flex;
                     justify-content: end;
-                    font-family: var(--kanit-font);
+                    font-family: var(--secondary-font);
                     button{
                         margin: 0 calc(100%/10);
                         width: 20%;
@@ -1403,7 +1426,7 @@ footer{
       }
 .game2body{
 
-    font-family: var(--kanit-font);
+    font-family: var(--secondary-font);
     .content h3{
         text-align: center;
         margin: 25px auto ;
@@ -1479,7 +1502,7 @@ footer{
 /*------------------------------------login-css-------------------------------------*/
 /*---------------------------------------------------------------------------------------*/
   .login-body{
-    font-family: var(--kanit-font);
+    font-family: var(--secondary-font);
     width: 100%;
     min-height: 50vh;
     max-height: 100vh;
