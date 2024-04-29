@@ -19,6 +19,36 @@ body{
     footer{
         margin: 0;
     }
+    .sticky{
+        background: var(--bg-color);
+        .space{
+            .links{
+                ul{
+                    li{
+                        .recycle{
+                            background: var(--bg-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    nav{
+        background: transparent;
+        .space{
+            .links{
+                ul{
+                    li{
+                        .recycle{
+                            background: transparent;
+                            backdrop-filter: blur(var(--nav-blur));
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
 }
 
 body {
@@ -186,7 +216,7 @@ nav{
     padding: 15px;
     backdrop-filter: blur(var(--nav-blur));
     border-bottom: var(--main-color)  solid 1px;
-
+    transition:all .2s linear;
 
 
     
@@ -233,7 +263,7 @@ nav{
                             border-top: 0;
                             margin: 10px 0 0 0 ;
                             border-radius: 4px;
-                            background: var(--nav-color);
+                            background: var(--bg-color);
                             display: none;
                             transition: all  .25s ease-in-out;
                             padding-top: 70px;

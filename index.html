@@ -48,7 +48,7 @@
                         <li><button onclick="window.location='index.html'"><ion-icon name="home"></ion-icon> HOME</button></li>
                         <li><button onclick="window.location='about.html'"><ion-icon name="person"></ion-icon> ABOUT US</button></li>
                         <li><button><ion-icon name="leaf"></ion-icon> RECYCLE <span><ion-icon name="chevron-forward-outline" class="arrow"></ion-icon></span></button>
-                            <div class="recycle">
+                            <div class="recycle" id="recycle">
                                 <ul>
                                     <li><button onclick="window.location='videos.html'"><ion-icon name="play-circle"></ion-icon> VIDEOS</button>
                                     <hr>
@@ -139,19 +139,13 @@
             </div>
         </div>
     </div>
-
-
-<script src="https://translate.google.com/translate_a/element.js? cb=googleTranslateElementInit"></script>
-
-<script>
-
-function googleTranslateElementInit(){
-
-new google.translate.TranslateElement(
-{pageLanguage: 'en'},'google_translate_element');
-}
-
- </script>
+    <script>
+        window.addEventListener("scroll", function() {
+    let nav = document.getElementById("nav");
+    let recycle = document.getElementById("recycle");
+    nav.classList.toggle("sticky" , window.scrollY > 650 ) ;
+})
+    </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js" ></script>
     <script>
         AOS.init();
